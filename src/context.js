@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import items from "./data";
+import React, { Component } from 'react';
+import items from './data';
 
 const RoomContext = React.createContext();
 // <RoomContext.Provider value={}
@@ -9,7 +9,7 @@ class RoomProvider extends Component {
     sortedRooms: [],
     featuredRooms: [],
     loading: true,
-    type: "all",
+    type: 'all',
     capacity: 1,
     price: 0,
     minPrice: 0,
@@ -59,7 +59,7 @@ class RoomProvider extends Component {
 
   handleChange = event => {
     const target = event.target;
-    const value = event.type === "checkbox" ? target.checked : target.value;
+    const value = event.type === 'checkbox' ? target.checked : target.value;
     const name = event.target.name;
     this.setState(
       {
@@ -88,7 +88,7 @@ class RoomProvider extends Component {
     capacity = parseInt(capacity);
 
     // filter by type
-    if (type !== "all") {
+    if (type !== 'all') {
       tempRooms = tempRooms.filter(room => room.type === type);
     }
 

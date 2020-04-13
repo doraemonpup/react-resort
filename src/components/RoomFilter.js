@@ -1,7 +1,7 @@
-import React from "react";
-import { useContext } from "react";
-import { RoomContext } from "../context";
-import Title from "../components/Title";
+import React from 'react';
+import { useContext } from 'react';
+import { RoomContext } from '../context';
+import Title from '../components/Title';
 
 // get all unique values
 const getUnique = (items, value) => {
@@ -24,9 +24,9 @@ export default function RoomFilter({ rooms }) {
   } = context;
 
   // get unique types
-  let types = getUnique(rooms, "type");
+  let types = getUnique(rooms, 'type');
   // add all
-  types = ["all", ...types];
+  types = ['all', ...types];
   // map to jsx
   types = types.map((item, index) => {
     return (
@@ -36,7 +36,7 @@ export default function RoomFilter({ rooms }) {
     );
   });
 
-  let guests = getUnique(rooms, "capacity");
+  let guests = getUnique(rooms, 'capacity');
   guests = guests.map((item, index) => {
     return (
       <option key={index} value={item}>
