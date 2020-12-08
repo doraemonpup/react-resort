@@ -29,12 +29,12 @@ export default class Services extends Component {
   };
   render() {
     return (
-      <section className="services">
-        <Title title="services" />
-        <div className="services-center">
+      <section className='services'>
+        <Title title='services' />
+        <div className='services-center'>
           {this.state.services.map((item, index) => {
             return (
-              <article key={index} className="service">
+              <article key={index} className='service'>
                 <span>{item.icon}</span>
                 <h6>{item.title}</h6>
                 <p>{item.info}</p>

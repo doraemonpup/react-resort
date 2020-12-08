@@ -46,17 +46,17 @@ export default function RoomFilter({ rooms }) {
   });
 
   return (
-    <section className="filter-container">
-      <Title title="search room" />
-      <form className="filter-form">
+    <section className='filter-container'>
+      <Title title='search room' />
+      <form className='filter-form'>
         {/* select type */}
-        <div className="form-group">
-          <label htmlFor="type">room type</label>
+        <div className='form-group'>
+          <label htmlFor='type'>room type</label>
           <select
-            name="type"
-            id="type"
+            name='type'
+            id='type'
             value={type}
-            className="form-control"
+            className='form-control'
             onChange={handleChange}
           >
             {types}
@@ -64,13 +64,13 @@ export default function RoomFilter({ rooms }) {
         </div>
         {/* end select type */}
         {/* select guests */}
-        <div className="form-group">
-          <label htmlFor="capacity">guests</label>
+        <div className='form-group'>
+          <label htmlFor='capacity'>guests</label>
           <select
-            name="capacity"
-            id="capacity"
+            name='capacity'
+            id='capacity'
             value={capacity}
-            className="form-control"
+            className='form-control'
             onChange={handleChange}
           >
             {guests}
@@ -78,64 +78,64 @@ export default function RoomFilter({ rooms }) {
         </div>
         {/* end select guests */}
         {/* room price */}
-        <div className="form-group">
-          <label htmlFor="price">room price ${price}</label>
+        <div className='form-group'>
+          <label htmlFor='price'>room price ${price}</label>
           <input
-            type="range"
-            name="price"
+            type='range'
+            name='price'
             min={minPrice}
             max={maxPrice}
-            id="price"
+            id='price'
             value={price}
             onChange={handleChange}
-            className="form-control"
+            className='form-control'
           />
         </div>
         {/* end room price */}
         {/* room size */}
-        <div className="form-group">
-          <label htmlFor="size">room size</label>
-          <div className="size-inputs">
+        <div className='form-group'>
+          <label htmlFor='size'>room size</label>
+          <div className='size-inputs'>
             <input
-              type="number"
-              name="minSize"
-              id="size"
+              type='number'
+              name='minSize'
+              id='size'
               value={minSize}
               onChange={handleChange}
-              className="size-input"
+              className='size-input'
             />
             <input
-              type="number"
-              name="maxSize"
-              id="size"
+              type='number'
+              name='maxSize'
+              id='size'
               value={maxSize}
               onChange={handleChange}
-              className="size-input"
+              className='size-input'
             />
           </div>
         </div>
         {/* end room size */}
         {/* extras */}
-        <div className="form-group">
-          <div className="single-extra">
+        <div className='form-group'>
+          <div className='single-extra'>
             <input
-              type="checkbox"
-              name="breakfast"
-              id="breakfast"
+              type='checkbox'
+              name='breakfast'
+              id='breakfast'
               checked={breakfast}
               onChange={handleChange}
             />
-            <label htmlFor="breakfast">breakfast</label>
+            <label htmlFor='breakfast'>breakfast</label>
           </div>
-          <div className="single-extra">
+          <div className='single-extra'>
             <input
-              type="checkbox"
-              name="pets"
-              id="pets"
+              type='checkbox'
+              name='pets'
+              id='pets'
               checked={pets}
               onChange={handleChange}
             />
-            <label htmlFor="pets">pets</label>
+            <label htmlFor='pets'>pets</label>
           </div>
         </div>
         {/* end extras */}
