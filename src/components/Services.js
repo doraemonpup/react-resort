@@ -3,7 +3,7 @@ import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
 import Title from './Title';
 
 const Services = () => {
-  let services = [
+  const services = [
     {
       icon: <FaCocktail />,
       title: 'free cocktails',
