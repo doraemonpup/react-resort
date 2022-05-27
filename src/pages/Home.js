@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 import Services from '../components/Services';
 import FeaturedRooms from '../components/FeaturedRooms';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Hero>
         <Banner
           title='luxurious rooms'
-          subtitle='deluxe rooms starting at $299'
+          subtitle='deluxe rooms starting at €299'
         >
           <Link to='/rooms' className='btn-primary'>
             our rooms
@@ -22,4 +22,6 @@ export default function Home() {
       <FeaturedRooms />
     </>
   );
-}
+};
+
+export default Home;

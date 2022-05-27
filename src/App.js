@@ -16,7 +16,7 @@ function App() {
         <Route path='/' element={<Home />} exact />
         <Route path='/rooms/' element={<Rooms />} exact />
         <Route path='/rooms/:slug' element={<SingleRoom />} exact />
-        <Route element={<Error />} />
+        <Route path='*' element={<Error />} />
       </Routes>
     </>
   );

@@ -4,7 +4,7 @@ import RoomList from './RoomList';
 import { withRoomConsumer } from '../context';
 import Loading from './Loading';
 
-function RoomContainer({ context }) {
+const RoomContainer = ({ context }) => {
   const { loading, sortedRooms, rooms } = context;
 
   if (loading) {
@@ -17,6 +17,6 @@ function RoomContainer({ context }) {
       <RoomList rooms={sortedRooms} />
     </>
   );
-}
+};
 
 export default withRoomConsumer(RoomContainer);

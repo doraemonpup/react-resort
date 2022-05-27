@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
 import StyledHero from '../components/StyledHero';
 import defaultBcg from '../images/room-1.jpeg';
+import Error from './Error';
 
 const SingleRoom = () => {
   const { slug } = useParams();
@@ -12,14 +13,15 @@ const SingleRoom = () => {
   const room = roomContext.getRoom(slug);
 
   if (!room) {
-    return (
-      <div className='error'>
-        <h3>no such room could be found...</h3>
-        <Link to='/rooms' className='btn-primary'>
-          back to rooms
-        </Link>
-      </div>
-    );
+    // return (
+    //   <div className='error'>
+    //     <h3>no such room could be found...</h3>
+    //     <Link to='/rooms' className='btn-primary'>
+    //       back to rooms
+    //     </Link>
+    //   </div>
+    // );
+    return <Error />;
   }
 
   const {
@@ -57,7 +59,7 @@ const SingleRoom = () => {
           </article>
           <article className='info'>
             <h3>info</h3>
-            <h6>price : ${price}</h6>
+            <h6>price : €{price}</h6>
             <h6>size : {size} SQFT</h6>
             <h6>
               max capacity :{' '}

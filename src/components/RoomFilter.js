@@ -8,8 +8,9 @@ const getUnique = (items, value) => {
   return [...new Set(items.map(item => item[value]))];
 };
 
-export default function RoomFilter({ rooms }) {
+const RoomFilter = ({ rooms }) => {
   const context = useContext(RoomContext);
+
   const {
     handleChange,
     type,
@@ -79,7 +80,7 @@ export default function RoomFilter({ rooms }) {
         {/* end select guests */}
         {/* room price */}
         <div className='form-group'>
-          <label htmlFor='price'>room price ${price}</label>
+          <label htmlFor='price'>room price €{price}</label>
           <input
             type='range'
             name='price'
@@ -142,4 +143,6 @@ export default function RoomFilter({ rooms }) {
       </form>
     </section>
   );
-}
+};
+
+export default RoomFilter;
