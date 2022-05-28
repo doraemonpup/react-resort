@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <Hero>
+    <Hero hero='aboutHero'>
       <Banner
         title='About Us'
         subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit,
