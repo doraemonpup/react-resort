@@ -1,0 +1,4 @@
+# root folder
+node_modules
+Dockerfile
+.dockerignore
