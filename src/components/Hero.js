@@ -1,4 +1,4 @@
-const Hero = ({ children, hero }) => {
+const Hero = ({ children, hero = 'defaultHero' }) => {
   return <header className={hero}>{children}</header>;
 };
 
