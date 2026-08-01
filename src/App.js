@@ -6,7 +6,7 @@ import Error from './pages/Error';
 import Navbar from './components/Navbar';
 import About from './pages/About';
 
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router';
 
 function App() {
   return (

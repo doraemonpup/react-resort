@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { RoomContext } from '../context';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import Banner from '../components/Banner';
 import StyledHero from '../components/StyledHero';
 import defaultBcg from '../images/room-1.jpeg';
