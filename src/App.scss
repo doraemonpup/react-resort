@@ -750,3 +750,254 @@ input[type='range'].form-control {
   }
 }
 /* end of rooms filter */
+
+/* booking pages */
+.availability-form {
+  display: grid;
+  gap: 1rem;
+  align-items: end;
+
+  .availability-form-errors {
+    grid-column: 1 / -1;
+
+    p {
+      color: var(--primaryDark);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .btn-primary {
+    justify-self: start;
+  }
+}
+
+.availability-form--strip {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.availability-form--panel {
+  max-width: 480px;
+  grid-template-columns: 1fr;
+}
+
+.book-search {
+  padding: 5rem 0 2rem;
+}
+
+.book-results {
+  padding: 3rem 0 5rem;
+}
+
+.book-results-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.book-result {
+  background: var(--mainWhite);
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+  box-shadow: var(--lightShadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.book-result-info {
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+
+  h4 {
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h5 {
+    color: var(--primaryDark);
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+  }
+}
+/* end of booking pages */
+
+/* book room step */
+.book-room {
+  padding: 5rem 0 6rem;
+}
+
+.book-room-grid {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.book-room-summary {
+  img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--lightShadow);
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  dl {
+    display: grid;
+    gap: 1rem;
+  }
+
+  dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    color: var(--darkGrey);
+  }
+
+  dd {
+    font-size: 1.05rem;
+    color: var(--mainBlack);
+  }
+}
+
+.guest-form {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+
+  .btn-primary {
+    justify-self: start;
+  }
+}
+
+.book-room-reselect {
+  width: 90vw;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-room-message {
+  color: var(--primaryDark);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .book-room-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* end of book room step */
+
+/* booking confirmation */
+.booking-confirmed {
+  padding: 5rem 0 6rem;
+  text-align: center;
+
+  .btn-primary {
+    margin-top: 2rem;
+  }
+}
+
+.booking-missing {
+  margin-bottom: 1rem;
+}
+
+.booking-card {
+  width: 90vw;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--mainWhite);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--lightShadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+
+  .booking-ref {
+    background: var(--primaryLight);
+    color: var(--mainBlack);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+  }
+
+  dl {
+    display: grid;
+    gap: 0.9rem;
+    text-align: left;
+  }
+
+  dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    color: var(--darkGrey);
+  }
+
+  dd {
+    font-size: 1.05rem;
+    color: var(--mainBlack);
+  }
+}
+/* end of booking confirmation */
+
+/* home cta + room booking panel */
+.home-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 0 1rem;
+
+  .banner {
+    margin-bottom: 0;
+  }
+
+  .availability-form--strip {
+    width: auto;
+    max-width: 760px;
+    margin: 0;
+    background: var(--mainWhite);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--darkShadow);
+    padding: 1.5rem;
+  }
+}
+
+.room-booking {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto 6rem;
+
+  .availability-form--panel {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+/* end of home cta + room booking panel */

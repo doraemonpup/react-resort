@@ -28,7 +28,7 @@ Serves the production `build` output locally for pre-deployment checks.
 
 - [Vite](https://vitejs.dev) + `@vitejs/plugin-react` (replaced Create React App)
 - [React Router](https://reactrouter.com) v8 — pages in `src/pages/`, components in `src/components/`
-- React Context (class-based) in `src/context.js`
+- React Context (class-based) in `src/context.jsx`
 - Static data in `src/data.js` (13 rooms, no external API)
 - SCSS (`src/App.scss`, CSS custom properties) + `styled-components` (`StyledHero`)
 - Note: JSX lives in `.js` files; `vite.config.mjs` sets the esbuild `jsx` loader for `src/`

@@ -1,7 +1,7 @@
-import Hero from '../components/Hero';
-import Banner from '../components/Banner';
+import Hero from '../components/Hero.jsx';
+import Banner from '../components/Banner.jsx';
 import { Link } from 'react-router';
-import RoomContainer from '../components/RoomContainer';
+import RoomContainer from '../components/RoomContainer.jsx';
 
 const Rooms = () => {
   return (

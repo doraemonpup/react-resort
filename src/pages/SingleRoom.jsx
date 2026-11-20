@@ -1,14 +1,16 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router';
-import { RoomContext } from '../context';
+import { useNavigate, useParams } from 'react-router';
+import { RoomContext } from '../context.jsx';
 import { Link } from 'react-router';
-import Banner from '../components/Banner';
+import Banner from '../components/Banner.jsx';
 import StyledHero from '../components/StyledHero';
+import AvailabilityForm from '../components/AvailabilityForm.jsx';
 import defaultBcg from '../images/room-1.jpeg';
-import Error from './Error';
+import Error from './Error.jsx';
 
 const SingleRoom = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const roomContext = useContext(RoomContext);
   const room = roomContext.getRoom(slug);
 
@@ -77,6 +79,20 @@ const SingleRoom = () => {
             return <li key={index}>- {item}</li>;
           })}
         </ul>
+      </section>
+      <section className='room-booking'>
+        <div className='section-title'>
+          <h4>book this room</h4>
+          <div />
+        </div>
+        <AvailabilityForm
+          variant='panel'
+          onSubmit={({ checkIn, checkOut, guests }) =>
+            navigate(
+              `/book/${slug}?checkIn=${checkIn}&checkOut=${checkOut}&guests=${guests}`
+            )
+          }
+        />
       </section>
     </>
   );
