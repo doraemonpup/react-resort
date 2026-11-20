@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { RoomContext } from '../context';
 import AvailabilityForm from '../components/AvailabilityForm';
-import { isRoomAvailable, nightsBetween } from '../bookingStore';
+import { isRoomAvailable, nightsBetween, toDateKey } from '../bookingStore';
 
 const Book = () => {
   const roomContext = useContext(RoomContext);
@@ -14,7 +14,12 @@ const Book = () => {
 
   const nights = nightsBetween(checkIn, checkOut);
   const valid =
-    checkIn && checkOut && nights > 0 && Number.isInteger(guests) && guests >= 1;
+    checkIn &&
+    checkOut &&
+    nights > 0 &&
+    checkIn >= toDateKey(new Date()) &&
+    Number.isInteger(guests) &&
+    guests >= 1;
 
   const available = valid
     ? roomContext.rooms.filter(
