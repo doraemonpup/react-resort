@@ -911,3 +911,58 @@ input[type='range'].form-control {
   }
 }
 /* end of book room step */
+
+/* booking confirmation */
+.booking-confirmed {
+  padding: 5rem 0 6rem;
+  text-align: center;
+
+  .btn-primary {
+    margin-top: 2rem;
+  }
+}
+
+.booking-missing {
+  margin-bottom: 1rem;
+}
+
+.booking-card {
+  width: 90vw;
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--mainWhite);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--lightShadow);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+
+  .booking-ref {
+    background: var(--primaryLight);
+    color: var(--mainBlack);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+  }
+
+  dl {
+    display: grid;
+    gap: 0.9rem;
+    text-align: left;
+  }
+
+  dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    color: var(--darkGrey);
+  }
+
+  dd {
+    font-size: 1.05rem;
+    color: var(--mainBlack);
+  }
+}
+/* end of booking confirmation */

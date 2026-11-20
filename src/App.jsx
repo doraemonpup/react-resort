@@ -7,6 +7,7 @@ import Navbar from './components/Navbar.jsx';
 import About from './pages/About.jsx';
 import Book from './pages/Book.jsx';
 import BookRoom from './pages/BookRoom.jsx';
+import BookingConfirmed from './pages/BookingConfirmed.jsx';
 
 import { Routes, Route } from 'react-router';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/about' element={<About />} exact />
         <Route path='/book' element={<Book />} exact />
         <Route path='/book/:slug' element={<BookRoom />} exact />
+        <Route path='/booking/:ref' element={<BookingConfirmed />} exact />
         <Route path='*' element={<Error />} />
       </Routes>
     </>
