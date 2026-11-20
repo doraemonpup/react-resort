@@ -966,3 +966,38 @@ input[type='range'].form-control {
   }
 }
 /* end of booking confirmation */
+
+/* home cta + room booking panel */
+.home-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 0 1rem;
+
+  .banner {
+    margin-bottom: 0;
+  }
+
+  .availability-form--strip {
+    width: auto;
+    max-width: 760px;
+    margin: 0;
+    background: var(--mainWhite);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--darkShadow);
+    padding: 1.5rem;
+  }
+}
+
+.room-booking {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto 6rem;
+
+  .availability-form--panel {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+/* end of home cta + room booking panel */
