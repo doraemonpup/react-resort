@@ -1,5 +1,5 @@
-import Hero from '../components/Hero';
-import Banner from '../components/Banner';
+import Hero from '../components/Hero.jsx';
+import Banner from '../components/Banner.jsx';
 import { Link } from 'react-router';
 
 const About = () => {

@@ -1,8 +1,8 @@
-import Hero from '../components/Hero';
-import Banner from '../components/Banner';
+import Hero from '../components/Hero.jsx';
+import Banner from '../components/Banner.jsx';
 import { Link } from 'react-router';
-import Services from '../components/Services';
-import FeaturedRooms from '../components/FeaturedRooms';
+import Services from '../components/Services.jsx';
+import FeaturedRooms from '../components/FeaturedRooms.jsx';
 
 const Home = () => {
   return (

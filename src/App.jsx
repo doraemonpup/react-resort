@@ -1,10 +1,10 @@
 import './App.scss';
-import Home from './pages/Home';
-import Rooms from './pages/Rooms';
-import SingleRoom from './pages/SingleRoom';
-import Error from './pages/Error';
-import Navbar from './components/Navbar';
-import About from './pages/About';
+import Home from './pages/Home.jsx';
+import Rooms from './pages/Rooms.jsx';
+import SingleRoom from './pages/SingleRoom.jsx';
+import Error from './pages/Error.jsx';
+import Navbar from './components/Navbar.jsx';
+import About from './pages/About.jsx';
 
 import { Routes, Route } from 'react-router';
 

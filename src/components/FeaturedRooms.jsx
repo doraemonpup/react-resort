@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { RoomContext } from '../context';
-import Loading from './Loading';
-import Room from './Room';
-import Title from './Title';
+import { RoomContext } from '../context.jsx';
+import Loading from './Loading.jsx';
+import Room from './Room.jsx';
+import Title from './Title.jsx';
 
 const FeaturedRooms = () => {
   const roomContext = useContext(RoomContext);

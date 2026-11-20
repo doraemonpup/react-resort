@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { useParams } from 'react-router';
-import { RoomContext } from '../context';
+import { RoomContext } from '../context.jsx';
 import { Link } from 'react-router';
-import Banner from '../components/Banner';
+import Banner from '../components/Banner.jsx';
 import StyledHero from '../components/StyledHero';
 import defaultBcg from '../images/room-1.jpeg';
-import Error from './Error';
+import Error from './Error.jsx';
 
 const SingleRoom = () => {
   const { slug } = useParams();

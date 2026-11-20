@@ -1,4 +1,4 @@
-import Room from './Room';
+import Room from './Room.jsx';
 
 const RoomList = ({ rooms }) => {
   if (rooms.length === 0) {

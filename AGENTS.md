@@ -13,10 +13,10 @@ npm run preview  # serve the production build
 
 - **Framework**: Vite 7 + React (plain JS, no TypeScript). JSX lives in `.js` files — `vite.config.mjs` configures the esbuild `jsx` loader for `src/`.
 - **Routing**: react-router v8 — pages in `src/pages/`, components in `src/components/`. Import from `react-router` (v8 removed `react-router-dom`).
-- **State**: class-based React Context (`src/context.js`), not hooks/redux
+- **State**: class-based React Context (`src/context.jsx`), not hooks/redux
 - **Data**: static JSON in `src/data.js` (13 rooms, no external API)
 - **Styling**: SCSS in `src/App.scss` (CSS custom properties) + `styled-components` (`StyledHero` only)
-- **Entry**: `src/index.js` mounts `<RoomProvider> > <BrowserRouter> > <App />`; Vite entry is `index.html` (project root)
+- **Entry**: `src/index.jsx` mounts `<RoomProvider> > <BrowserRouter> > <App />`; Vite entry is `index.html` (project root)
 
 ## Routes
 

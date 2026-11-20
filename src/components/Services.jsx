@@ -1,5 +1,5 @@
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from 'react-icons/fa';
-import Title from './Title';
+import Title from './Title.jsx';
 
 const Services = () => {
   const services = [
