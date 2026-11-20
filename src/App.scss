@@ -837,3 +837,77 @@ input[type='range'].form-control {
   }
 }
 /* end of booking pages */
+
+/* book room step */
+.book-room {
+  padding: 5rem 0 6rem;
+}
+
+.book-room-grid {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.book-room-summary {
+  img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--lightShadow);
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  dl {
+    display: grid;
+    gap: 1rem;
+  }
+
+  dt {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: var(--mainSpacing);
+    text-transform: capitalize;
+    color: var(--darkGrey);
+  }
+
+  dd {
+    font-size: 1.05rem;
+    color: var(--mainBlack);
+  }
+}
+
+.guest-form {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+
+  .btn-primary {
+    justify-self: start;
+  }
+}
+
+.book-room-reselect {
+  width: 90vw;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.book-room-message {
+  color: var(--primaryDark);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .book-room-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* end of book room step */

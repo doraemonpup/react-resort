@@ -6,6 +6,7 @@ import Error from './pages/Error.jsx';
 import Navbar from './components/Navbar.jsx';
 import About from './pages/About.jsx';
 import Book from './pages/Book.jsx';
+import BookRoom from './pages/BookRoom.jsx';
 
 import { Routes, Route } from 'react-router';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/rooms/:slug' element={<SingleRoom />} exact />
         <Route path='/about' element={<About />} exact />
         <Route path='/book' element={<Book />} exact />
+        <Route path='/book/:slug' element={<BookRoom />} exact />
         <Route path='*' element={<Error />} />
       </Routes>
     </>
