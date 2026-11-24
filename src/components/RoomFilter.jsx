@@ -94,13 +94,15 @@ const RoomFilter = ({ rooms }) => {
         {/* end room price */}
         {/* room size */}
         <div className='form-group'>
-          <label htmlFor='min-size'>room size (SQFT)</label>
+          <label htmlFor='min-size'>
+            room size (<span className='unit'>m²</span>)
+          </label>
           <div className='size-inputs'>
             <input
               type='number'
               name='minSize'
               id='min-size'
-              aria-label='Minimum size in square feet'
+              aria-label='Minimum size in square metres'
               value={minSize}
               onChange={handleChange}
               className='size-input'
@@ -109,7 +111,7 @@ const RoomFilter = ({ rooms }) => {
               type='number'
               name='maxSize'
               id='max-size'
-              aria-label='Maximum size in square feet'
+              aria-label='Maximum size in square metres'
               value={maxSize}
               onChange={handleChange}
               className='size-input'

@@ -37,6 +37,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* keep SI units lowercase where surrounding labels are capitalised */
+.unit {
+  text-transform: none;
+}
+
 h1,
 h2,
 h3,
