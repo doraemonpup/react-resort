@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import logo from '../images/logo.svg';
-import { FaAlignRight } from 'react-icons/fa';
-import { Link } from 'react-router';
+import React, { useState } from 'react'
+import logo from '../images/logo.svg'
+import { FaAlignRight } from 'react-icons/fa'
+import { Link } from 'react-router'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <nav className='navbar'>
@@ -29,12 +29,15 @@ const Navbar = () => {
             <Link to='/rooms'>Rooms</Link>
           </li>
           <li>
+            <Link to='/contact'>Contact</Link>
+          </li>
+          <li>
             <Link to='/about'>About</Link>
           </li>
         </ul>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

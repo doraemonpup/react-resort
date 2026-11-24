@@ -223,7 +223,7 @@ p {
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 0.5rem 0;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
     transition: var(--mainTransition);
     gap: 0;
@@ -236,7 +236,7 @@ p {
   }
 
   .show-nav {
-    height: 185px;
+    max-height: 400px;
   }
 }
 /* end of navbar */
@@ -244,7 +244,8 @@ p {
 /* Hero */
 .defaultHero,
 .roomsHero,
-.aboutHero {
+.aboutHero,
+.contactHero {
   min-height: calc(100vh - 70px);
   background: url('./images/defaultBcg.jpeg') center / cover no-repeat;
   display: flex;
@@ -276,6 +277,10 @@ p {
 
 .aboutHero {
   background-image: url('./images/aboutBcg.jpeg');
+}
+
+.contactHero {
+  min-height: 42vh;
 }
 /* End of Hero */
 
@@ -1281,6 +1286,129 @@ input[type='range'].form-control {
   padding: 5rem 1.5rem 6rem;
 }
 /* end of home cta + room booking panel */
+
+/* contact page (demo only, nothing is submitted) */
+.contact {
+  padding: 5rem 1.5rem 6rem;
+  background: var(--offWhite);
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  background: var(--mainWhite);
+  border: 1px solid var(--mainGrey);
+  border-top: 3px solid var(--primaryColor);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--lightShadow);
+  padding: 2.5rem;
+
+  .form-control {
+    background: var(--mainWhite);
+    padding: 0.7rem 0.85rem;
+    font-size: 0.95rem;
+  }
+}
+
+.contact-head {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--mainGrey);
+  margin-bottom: 1.5rem;
+
+  h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+.contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-message {
+  min-height: 9.5rem;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.contact-submit {
+  justify-self: stretch;
+  text-align: center;
+  padding: 0.85rem 1.25rem;
+
+  &:disabled,
+  &:disabled:hover {
+    background: var(--mainGrey);
+    border-color: var(--mainGrey);
+    color: #9a9aab;
+    cursor: not-allowed;
+  }
+}
+
+.contact-receipt {
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-receipt-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background: var(--primaryLight);
+  color: var(--primaryDark);
+  font-size: 1.3rem;
+}
+
+.contact-back {
+  max-width: 620px;
+  margin: 2rem auto 0;
+  text-align: center;
+
+  a {
+    color: var(--darkGrey);
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--mainGrey);
+    padding-bottom: 2px;
+    transition: var(--mainTransition);
+
+    &:hover {
+      color: var(--primaryDark);
+      border-color: var(--primaryColor);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contact-card,
+  .contact-receipt {
+    padding: 1.75rem 1.5rem;
+  }
+}
+/* end of contact page */
 
 @media (prefers-reduced-motion: reduce) {
   *,
