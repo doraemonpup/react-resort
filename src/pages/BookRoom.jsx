@@ -143,7 +143,13 @@ const BookRoom = () => {
           <p className='book-room-message'>
             Those dates are no longer available.
           </p>
-          <AvailabilityForm variant='panel' onSubmit={handleReselect} />
+          <AvailabilityForm
+            variant='panel'
+            title='Try different dates'
+            maxGuests={room.capacity}
+            nightlyRate={room.price}
+            onSubmit={handleReselect}
+          />
         </div>
       )}
     </section>

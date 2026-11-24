@@ -11,6 +11,7 @@ const Book = () => {
   const checkIn = searchParams.get('checkIn') || '';
   const checkOut = searchParams.get('checkOut') || '';
   const guests = parseInt(searchParams.get('guests'), 10);
+  const maxGuests = Math.max(...roomContext.rooms.map(room => room.capacity), 1);
 
   const nights = nightsBetween(checkIn, checkOut);
   const valid =
@@ -37,6 +38,7 @@ const Book = () => {
         </div>
         <AvailabilityForm
           variant='strip'
+          maxGuests={maxGuests}
           initial={
             valid ? { checkIn, checkOut, guests } : undefined
           }
