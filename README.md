@@ -33,6 +33,8 @@ Serves the production `build` output locally for pre-deployment checks.
 - **Rooms** - filterable list by type, guests, price, size (m²), breakfast and pets.
 - **Single room** - gallery, details, amenity list, and a booking card with a
   live nights × rate total.
+- **About** - hero banner over the beach photo, then the resort story, a
+  glass stats band over the pool photo, three values cards, and a closing CTA.
 - **Booking flow** - `/book` searches availability for a date range and guest
   count; `/book/:slug` collects guest details; `/booking/:ref` shows the receipt.
   Availability is mocked deterministically per room slug in `src/bookingStore.js`,

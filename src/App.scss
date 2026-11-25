@@ -335,6 +335,11 @@ p {
 
 .aboutHero {
   background-image: url('./images/aboutBcg.jpeg');
+  min-height: 70vh;
+
+  .banner p {
+    text-transform: none;
+  }
 }
 
 .contactHero {
@@ -346,8 +351,8 @@ p {
 .banner {
   display: inline-block;
   background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 3rem 3.5rem;
@@ -1355,6 +1360,283 @@ input[type='range'].form-control {
   padding: 5rem 1.5rem 6rem;
 }
 /* end of home cta + room booking panel */
+
+/* about page */
+.about-story {
+  padding: 6rem 1.5rem;
+  background: var(--mainWhite);
+}
+
+.about-story-inner {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.about-story-media {
+  position: relative;
+  margin: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+    background: var(--primaryLight);
+    border: 1px solid rgba(201, 149, 62, 0.35);
+    border-radius: var(--borderRadius);
+  }
+
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--darkShadow);
+  }
+}
+
+.about-story-copy {
+  max-width: 34rem;
+
+  h2 {
+    font-size: 2.35rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    color: #4a4a5a;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  .about-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primaryInk);
+    margin-bottom: 0.9rem;
+  }
+
+  .about-signature {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--mainBlack);
+    margin: 1.75rem 0 0;
+  }
+}
+
+.about-rule {
+  width: 3.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--primaryColor);
+  margin-bottom: 1.75rem;
+}
+
+.about-stats {
+  padding: 6rem 1.5rem;
+  background:
+    linear-gradient(rgba(16, 18, 30, 0.82), rgba(16, 18, 30, 0.66)),
+    url('./images/details-3.jpeg') center / cover no-repeat;
+}
+
+.about-stats-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  text-align: center;
+
+  div {
+    padding: 2.25rem 1.25rem;
+    border-radius: 14px;
+    background: linear-gradient(rgba(22, 24, 38, 0.42), rgba(22, 24, 38, 0.28));
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      0 18px 40px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  dt {
+    margin-bottom: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  dd {
+    margin: 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--mainWhite);
+  }
+}
+
+.about-values {
+  padding: 6rem 1.5rem;
+  background: var(--offWhite);
+}
+
+.about-values-grid {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.about-value {
+  padding: 2.5rem 2rem;
+  background: var(--mainWhite);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--lightShadow);
+  transition: var(--mainTransition);
+
+  &:hover {
+    box-shadow: var(--darkShadow);
+    transform: translateY(-4px);
+  }
+
+  span {
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    background: var(--primaryLight);
+    color: var(--primaryDark);
+    font-size: 1.2rem;
+  }
+
+  h6 {
+    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #4a4a5a;
+  }
+}
+
+.about-close {
+  padding: 6rem 1.5rem;
+  text-align: center;
+  color: var(--mainWhite);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(201, 149, 62, 0.2), transparent 62%),
+    var(--mainBlack);
+
+  h2 {
+    color: var(--mainWhite);
+    font-size: 2.4rem;
+  }
+
+  .about-rule {
+    margin: 1.25rem auto 1.5rem;
+  }
+
+  p {
+    max-width: 32rem;
+    margin: 0 auto 2.5rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+  }
+}
+
+.about-close-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.75rem;
+}
+
+.about-close-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: var(--mainSpacing);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 2px;
+  transition: var(--mainTransition);
+
+  &:hover {
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .about-stats-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about-story-inner {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-story {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-story-media::before {
+    inset: 0.75rem -0.75rem -0.75rem 0.75rem;
+  }
+
+  .about-story-copy h2 {
+    font-size: 1.9rem;
+  }
+
+  .about-stats,
+  .about-values,
+  .about-close {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .about-stats-inner dd {
+    font-size: 2.25rem;
+  }
+
+  .about-stats-inner div {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-close h2 {
+    font-size: 1.9rem;
+  }
+}
+/* end of about page */
 
 /* contact page (demo only, nothing is submitted) */
 .contact {
