@@ -46,6 +46,7 @@ docker compose up   # dev with live-reload via src/ volume mount
 ## Notes
 
 - `public/_redirects` exists for Netlify SPA fallback routing
+- CSS vendor prefixes must be written `-webkit-` first (`-webkit-backdrop-filter` before `backdrop-filter`). Vite 8 minifies CSS with Lightning CSS, which treats the pair as one property and keeps only the last declaration - with the standard property last it keeps both and Chrome/Safari both work; reversed, only the (Chrome-ignored) prefixed one survives production builds.
 - Tests: `src/bookingStore.test.js` (Vitest + jsdom, 17 tests). `src/setupTests.js` loads `@testing-library/jest-dom`
 - Dev server uses `strictPort: true` - a second instance fails rather than picking another port
 - `allowScripts` in `package.json` approves install scripts for `@parcel/watcher`, `esbuild`, `fsevents` (npm 12 requirement)
