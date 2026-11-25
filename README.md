@@ -1,6 +1,6 @@
 # Beach Resort
 
-Static React site for a luxury beach resort — rooms, filtering, and booking-facing pages.
+Static React site for a luxury beach resort - rooms, filtering, and booking-facing pages.
 
 ## Available Scripts
 
@@ -29,26 +29,30 @@ Serves the production `build` output locally for pre-deployment checks.
 
 ## Features
 
-- **Home** — hero with an availability strip, services, featured rooms.
-- **Rooms** — filterable list by type, guests, price, size (m²), breakfast and pets.
-- **Single room** — gallery, details, amenity list, and a booking card with a
+- **Home** - hero with an availability strip, services, featured rooms.
+- **Rooms** - filterable list by type, guests, price, size (m²), breakfast and pets.
+- **Single room** - gallery, details, amenity list, and a booking card with a
   live nights × rate total.
-- **Booking flow** — `/book` searches availability for a date range and guest
+- **Booking flow** - `/book` searches availability for a date range and guest
   count; `/book/:slug` collects guest details; `/booking/:ref` shows the receipt.
   Availability is mocked deterministically per room slug in `src/bookingStore.js`,
   and confirmed bookings are persisted to `localStorage` (`resort-bookings`).
   There is no backend.
-- **Contact** — `src/pages/Contact.jsx` is a **UI-only demo**: the Send button
+- **Contact** - `src/pages/Contact.jsx` is a **UI-only demo**: the Send button
   unlocks once all four fields are filled (and the email looks valid), then the
   form is replaced by a "Thanks, we'll reply within 24 hours" receipt. Nothing is
   transmitted or stored.
 
 Prices are shown in `€`; room sizes are stored and displayed in `m²`.
 
+The whole site is a demo: a `Demo` badge sits next to the logo in the navbar, and
+the contact, guest-details and booking-receipt surfaces each carry a short note
+saying nothing is actually sent, charged or stored server-side.
+
 ## Tech Stack
 
 - [Vite](https://vitejs.dev) 8 + `@vitejs/plugin-react` (replaced Create React App)
-- [React Router](https://reactrouter.com) v8 — pages in `src/pages/`, components in `src/components/`
+- [React Router](https://reactrouter.com) v8 - pages in `src/pages/`, components in `src/components/`
 - React 19 with a class-based Context (`src/context.jsx`) for room state and filtering
 - Static data in `src/data.js` (13 rooms, no external API)
 - SCSS (`src/App.scss`, CSS custom properties) + `styled-components` (`StyledHero` only)

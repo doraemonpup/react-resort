@@ -42,6 +42,23 @@ body {
   text-transform: none;
 }
 
+/* "this is a demo" notices next to forms and the booking receipt */
+.demo-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--darkGrey);
+
+  svg {
+    flex-shrink: 0;
+    margin-top: 0.12rem;
+    color: var(--primaryDark);
+  }
+}
+
 h1,
 h2,
 h3,
@@ -167,6 +184,27 @@ p {
   }
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-demo {
+  border: 1px solid var(--primaryColor);
+  background: var(--primaryLight);
+  color: var(--primaryInk);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: default;
+}
+
 .nav-btn {
   display: none;
   background: transparent;
@@ -212,6 +250,10 @@ p {
     display: block;
   }
 
+  .nav-header img {
+    height: 30px;
+  }
+
   .nav-links {
     position: fixed;
     top: 70px;
@@ -237,6 +279,22 @@ p {
 
   .show-nav {
     max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .nav-brand {
+    gap: 0.4rem;
+  }
+
+  .nav-header img {
+    height: 24px;
+  }
+
+  .nav-demo {
+    padding: 0.05rem 0.4rem;
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
   }
 }
 /* end of navbar */
@@ -1169,6 +1227,10 @@ input[type='range'].form-control {
   .btn-primary {
     justify-self: start;
   }
+
+  .demo-note {
+    margin-top: -0.55rem;
+  }
 }
 
 .book-room-reselect {
@@ -1198,6 +1260,13 @@ input[type='range'].form-control {
 
   .btn-primary {
     margin-top: 2rem;
+  }
+
+  .demo-note {
+    justify-content: center;
+    max-width: 480px;
+    margin: 1.25rem auto 0;
+    padding: 0 1.5rem;
   }
 }
 
@@ -1324,6 +1393,11 @@ input[type='range'].form-control {
 
   p {
     font-size: 0.85rem;
+  }
+
+  .demo-note {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
   }
 }
 

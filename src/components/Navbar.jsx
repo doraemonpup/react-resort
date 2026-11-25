@@ -14,9 +14,17 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='nav-center'>
         <div className='nav-header'>
-          <Link to='/'>
-            <img src={logo} alt='Beach Resort' />
-          </Link>
+          <div className='nav-brand'>
+            <Link to='/'>
+              <img src={logo} alt='Beach Resort' />
+            </Link>
+            <span
+              className='nav-demo'
+              title='Demo site - no real bookings, messages or payments'
+            >
+              Demo
+            </span>
+          </div>
           <button type='button' className='nav-btn' onClick={handleToggle}>
             <FaAlignRight className='nav-icon' />
           </button>

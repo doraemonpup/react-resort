@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router';
+import { FaInfoCircle } from 'react-icons/fa';
 import { getBookingByRef } from '../bookingStore';
 
 const BookingConfirmed = () => {
@@ -58,6 +59,12 @@ const BookingConfirmed = () => {
           </div>
         </dl>
       </div>
+      <p className='demo-note'>
+        <FaInfoCircle aria-hidden='true' />
+        <span>
+          Demo receipt - no payment was taken and nothing was sent to us.
+        </span>
+      </p>
       <Link to='/' className='btn-primary'>
         Back to home
       </Link>

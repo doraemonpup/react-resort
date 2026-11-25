@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { FaInfoCircle } from 'react-icons/fa';
 import Hero from '../components/Hero.jsx';
 import Banner from '../components/Banner.jsx';
 import { Link } from 'react-router';
@@ -67,6 +68,10 @@ const Contact = () => {
             <header className='contact-head'>
               <h3>Send us a message</h3>
               <p>All fields are required.</p>
+              <p className='demo-note'>
+                <FaInfoCircle aria-hidden='true' />
+                <span>Demo only - nothing is actually sent or stored.</span>
+              </p>
             </header>
             <form className='contact-form' onSubmit={handleSubmit} noValidate>
               <div className='form-group'>

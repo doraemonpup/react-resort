@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react';
+import { FaInfoCircle } from 'react-icons/fa';
 import { useNavigate, useParams, useSearchParams } from 'react-router';
 import { RoomContext } from '../context';
 import AvailabilityForm from '../components/AvailabilityForm';
@@ -136,6 +137,13 @@ const BookRoom = () => {
             <button type='submit' className='btn-primary'>
               Confirm booking
             </button>
+            <p className='demo-note'>
+              <FaInfoCircle aria-hidden='true' />
+              <span>
+                Demo only - the booking is saved in this browser, not sent
+                anywhere.
+              </span>
+            </p>
           </form>
         </div>
       ) : (
